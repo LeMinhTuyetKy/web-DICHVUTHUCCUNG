@@ -13,10 +13,10 @@ namespace clonePetService.Models
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class thucungEntities : DbContext
+    public partial class thucungEntities1 : DbContext
     {
-        public thucungEntities()
-            : base("name=thucungEntities")
+        public thucungEntities1()
+            : base("name=thucungEntities1")
         {
         }
     
@@ -38,5 +38,7 @@ namespace clonePetService.Models
         public virtual DbSet<Service> Services { get; set; }
         public virtual DbSet<ServiceCategory> ServiceCategories { get; set; }
         public virtual DbSet<User> Users { get; set; }
+
+        public System.Data.Entity.DbSet<clonePetService.Models.Product1> Product1 { get; set; }
     }
 }

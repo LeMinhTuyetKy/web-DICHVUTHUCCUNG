@@ -791,7 +791,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <EntityContainer Name="thucungEntities" annotation:LazyLoadingEnabled="true">
+        <EntityContainer Name="thucungEntities1" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="Admins" EntityType="Self.Admin" />
           <EntitySet Name="Advs" EntityType="Self.Adv" />
           <EntitySet Name="Billingnformations" EntityType="Self.Billingnformation" />
@@ -867,7 +867,7 @@
     <!-- C-S mapping content -->
     <edmx:Mappings>
       <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-        <EntityContainerMapping StorageEntityContainer="thucungModelStoreContainer" CdmEntityContainer="thucungEntities">
+        <EntityContainerMapping StorageEntityContainer="thucungModelStoreContainer" CdmEntityContainer="thucungEntities1">
           <EntitySetMapping Name="Admins">
             <EntityTypeMapping TypeName="thucungModel.Admin">
               <MappingFragment StoreEntitySet="Admin">

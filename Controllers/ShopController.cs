@@ -26,7 +26,7 @@ namespace clonePetService.Controllers
              }*/
 
 
-        public List<Product> listProducts = new List<Product>();
+        public List<Product1> listProducts = new List<Product1>();
         public string strConnect = "Data Source=.;Initial Catalog=thucung;Integrated Security=True";
 
         public ActionResult Index(int first_price = -1, int last_price = -1,string search_key="")
@@ -39,11 +39,11 @@ namespace clonePetService.Controllers
             return View(listProducts);
         }
 
-        public List<Product> getData(int first_price=-1, int last_price=-1)   
+        public List<Product1> getData(int first_price=-1, int last_price=-1)   
         {
 
             SqlConnection sqlCon = new SqlConnection(strConnect);
-            listProducts = new List<Product>();
+            listProducts = new List<Product1>();
             try
             {
                 sqlCon.Open();
