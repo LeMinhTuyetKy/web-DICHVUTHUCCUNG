@@ -1,0 +1,53 @@
+﻿@model List<clonePetService.Models.DichVu>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Dich vu page</h2>
+<main>
+    <form action="/DichVu/Index">
+        <input name="Search" id="Search" />
+        <button type="submit">Tìm</button>
+    </form>
+
+    <div>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">STT</th>
+                    <th scope="col">Name Bai hat</th>
+                    <th scope="col">IDNS</th>
+                    <th scope="col">IDTL</th>
+                    <th scope="col">Sửa/Xóa</th>
+                </tr>
+            </thead>
+            <tbody>
+                @{
+                    foreach (var i in Model)
+                    {
+                        <tr>
+                            <td scope="row"> @i.ID </td>
+                            <td>@i.TenBaiHat </td>
+                            <td>@i.IDNS </td>
+                            <td>@i.IDTL</td>
+                            <td style="display:flex"><form action="/DichVu/Change" method="post"><button type="submit" name="id" id="id" value="@i.ID">sửa</button></form>|<form action="/DichVu/Delete" method="post"><button type="submit" name="id" id="id" value="@i.ID">xóa</button></form></td>
+                        </tr>
+                    }
+                }
+
+            </tbody>
+        </table>
+
+    </div>
+
+    <div>
+        @Html.ActionLink("show all", "ShowAll", "DichVu", new { area = "" }, new { @class = "nav-link text-dark" });
+    </div>
+
+    <div>
+        @Html.ActionLink("create", "Create", "DichVu", new { area = "" }, new { @class = "nav-link text-dark" });
+    </div>
+</main>
+

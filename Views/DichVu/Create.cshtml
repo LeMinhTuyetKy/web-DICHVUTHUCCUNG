@@ -1,0 +1,26 @@
+﻿@model clonePetService.Models.DichVu
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<form method="post" action="/DichVu/Create" class="form-group">
+    <div>
+        <label for="TenBaiHat">Tên Bài hát</label>
+        @Html.TextBoxFor(model => model.TenBaiHat, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.TenBaiHat, "", new { @class = "text-danger" })
+    </div>
+    <div>
+        <label for="IDTL">Thể Loại Bài hát</label>
+        @Html.TextBoxFor(model => model.IDTL, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.IDTL, "", new { @class = "text-danger" })
+    </div>
+    <div>
+        <label for="IDNS">Nghệ sĩ</label>
+        @Html.TextBoxFor(model => model.IDNS, new { @class = "form-control" })
+        @Html.ValidationMessageFor(model => model.IDNS, "", new { @class = "text-danger" })
+    </div>
+
+    <input type="submit" value="submit" />
+</form>
+

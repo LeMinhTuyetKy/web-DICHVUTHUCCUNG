@@ -1,0 +1,367 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+<style>
+    .TextH1Home {
+        font-size: 3rem;
+        color: red;
+    }
+
+    .elementor-5 {
+        color: #110729;
+        text-shadow: 4px 2px 0px rgba(110,193,228,0.3);
+        margin: 0px px 0px 30px 0px;
+        font-family: "Montserrat", Sans-serif;
+        font-weight: 600;
+        line-height: 74px;
+    }
+    .btn-xemthem{
+
+    padding: 10px 20px 10px 20px;
+    font-family: "Montserrat", Sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    color: #FFFFFF;
+    background-color: transparent;
+    background-image: linear-gradient(80deg, #3d51ac 0%, #2475fb 100%);
+    border-style: none;
+    border-radius: 90px 90px 90px 90px;
+    box-shadow: 10px 15px 30px 0px rgba(0, 0, 0, 0.15);
+    }
+    .btn-xemthem:hover{
+        opacity:0.7;
+    }
+    .elementkit-infobox-icon{
+        font-size:60px;
+        margin:24px
+    }
+    .elementskit-section-title {
+        color: #110729;
+        margin: 0px 0px 30px 0px;
+        font-family: "Montserrat", Sans-serif;
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 52px;
+    }
+        .elementskit-section-title span {
+            color: #49b3f4;
+            font-family: "Montserrat", Sans-serif;
+            font-size: 48px;
+            font-weight: 700;
+            text-shadow: 3px 1px 0px #000000;
+        }
+
+    .text-ellipsis {
+        max-width:250px;
+        overflow: hidden; 
+        text-overflow: ellipsis; 
+        max-height:60px;
+    }
+    .imgIn_Dichvucatlong{
+        border:8px solid #fff;
+        border-radius:8px;
+    }
+    .span_TextBlue:hover{
+        color:#110729;
+    }
+    .theP_In_DichVuCatLong{
+        font-size:1.5rem;
+        font-weight:500;
+    }
+    .theP_In_DichVuCatLong p{
+        color:#333;
+    }
+        .theP_In_DichVuCatLong i {
+            color: #3d51ac;
+        }
+            .theP_In_DichVuCatLong:hover  i {
+                color: #49b3f4;
+            }
+    .divCombo_in_Combo {
+        width: 80%;
+        background-color: #4C4C4C;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        border-top-left-radius: 999px;
+        align-content:center;
+        border-bottom-left-radius: 999px;
+        padding:12px 0;
+
+        margin-left:68px;
+
+    }
+    .icon_Check_Minus{
+        font-size:1.2rem;
+        margin:auto 8px;
+    }
+    .card-petservice-combo:hover{
+        box-shadow:rgba(0,0,0,0.1) 2px 7px ;
+        background-color:red;
+    }
+</style>
+<main>
+    <div class="container">
+        @*    phần này là phần html có mặt con chó trên phần đầu trang web*@
+        <div class="row " style="margin:64px 0">
+            <div class="col-lg-7 col-sm-12">
+                <p>
+                        
+                </p>
+                <h2 style="font-size:60px" class="elementor-5 d-lg-block d-none">
+                    <i>DỊCH VỤ THÚ CƯNG</i><br><b>TẠI NHÀ</b>
+                </h2>
+                <h2 style="font-size:32px" class="elementor-5 d-sm-block d-md-none">
+                    <i>DỊCH VỤ THÚ CƯNG</i><br><b>TẠI NHÀ</b>
+                </h2>
+                <h4 style="font-weight:400" class="d-flex">
+                    <p style="font-weight:700">UY TÍN HÀNG ĐẦU-</p> TẠI HỒ CHÍ MINH
+                </h4>
+                <div>
+                    <button class="btn-xemthem me-4" style="font-size:1rem">
+                        Xem Thêm <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <button class="btn btn-outline-primary" style="border-radius:999px;font-size:1.2rem;font-weight:500">
+                        Online Booking
+                    </button>
+                </div>
+
+
+            </div>
+
+            <div class="col-sm-12 col-lg-5">
+                <img class="w-100" src="https://petservicehcm.com/wp-content/uploads/2019/11/pet-care-slide3-img-1.png.webp" />
+            </div>
+        </div>
+        @*   phần này là phần mấy cái card trong trang web chỗ mấy con chó đồ ấy sao chép 3 cái thay đổi đúng icon  với text*@
+    <div class="row" style="margin:64px 0">
+        <div class="col-md-3 col-12">
+            <div class="card " style="padding:32px 0">
+                <i aria-hidden="true" class="elementkit-infobox-icon fas fa-dog "></i>
+                <div class="card-body " style="margin:auto 12px">
+                    <h5>
+                        PET SHOP
+                    </h5>
+                    <p>
+                        Cùng với hơn 3.000 khách hàng đã luôn tin tưởng, đồng hành, chúng tôi luôn đặt ra những mục tiêu và thử thách mới. PET SERVICE cung cấp các sản phẩm, phụ kiện rất đa dạng...
+                    </p>
+                </div>
+                <button class="btn w-50 ms-4 btn-outline-primary" style="border-radius:999px">Xem thêm</button>
+            </div>
+        </div>
+        <div class="col-md-3 col-12">
+            <div class="card " style="padding:32px 0">
+                <i class="elementkit-infobox-icon fa-solid fa-scissors"></i>
+                <div class="card-body " style="margin:auto 12px">
+                    <h5>
+                        PET GROOMING
+                        .
+                    </h5>
+                    <p>
+                        Chúng tối biết cách làm thế nào để thú cưng của bạn trở nên đẳng cấp hơn cá tính hơn. Với dịch vụ cắt tỉa lông chó / mèo chúng tôi sẽ giúp các bé trở thành phiên bản hoàn hảo nhất..
+                    </p>
+                </div>
+                <button class="btn w-50 ms-4 btn-outline-primary" style="border-radius:999px">Xem thêm</button>
+            </div>
+        </div>
+        <div class="col-md-3 col-12">
+            <div class=" card " style="padding:32px 0">
+                <i class="elementkit-infobox-icon fa-solid fa-house"></i>
+                <div class="card-body " style="margin:auto 12px">
+                    <h5>
+                        PET HOTEL
+                    </h5>
+                    <p>
+                        Mọi hành động ở PET SERVICE đều bắt đầu từ sứ mệnh Trao Gửi Yêu Thương. Mọi thú cưng mới khi đến với chúng tôi đều được quan tâm đặc biệt bởi đội ngũ Nhân viên nhiều kinh nghiệm...
+                    </p>
+                </div>
+                <button class="btn w-50 ms-4 btn-outline-primary" style="border-radius:999px">Xem thêm</button>
+            </div>
+        </div>
+        <div class="col-md-3 col-sm-12">
+            <p>Pet Service</p>
+            <h2 class="elementskit-section-title ">
+                Dịch vụ <span><span><i class="span_TextBlue">Hàng đầu</i></span></span>
+            </h2>
+            <button class="btn-xemthem">Xem Các Dịch vụ  <i class="fa-solid fa-chevron-right"></i></button>
+        </div>
+    </div>
+    </div>
+
+
+    @* phần này là phần sản phẩm nổi bậc*@
+    <div id="SanphamNoiBac" style="background-color: #f5f5f5; padding:48px;margin-right:-16px">
+        <div class="container">
+            <div class="row" style="margin:32px 0">
+                <div class="col-md-3 col-sm-12">
+                    <p>Hot Item</p>
+                    <h2 class="elementskit-section-title ">
+                        Sản Phẩm <span><span><i class="span_TextBlue">Nổi Bật</i></span></span>
+                    </h2>
+                    <button class="btn-xemthem">Xem cửa hàng <i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+                <div class="col-md-3 col-sm-12">
+                    <div class="card">
+                        <img src="https://petservicehcm.com/wp-content/uploads/2023/08/bat-an-inox-88-768x768.png.webp" />
+                        <div class="card-body align-content-center d-inline-block justify-content-center">
+                            <span class="d-flex justify-content-center" style="font-weight:200">Sản phẩm điều trị</span>
+                            <p class="d-flex justify-content-center text-ellipsis" style="color: #393d39;font-size:1.2rem">Nhỏ gáy Advocate trị ve rận cho mèo dưới 4kg – 1 tuýp</p>
+                            <p class="d-flex justify-content-center" style="color: #393d39;font-size:1.4rem">150.000 ₫  </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-12">
+                    <div class="card">
+                        <img src="https://petservicehcm.com/wp-content/uploads/2023/08/bat-an-inox-88-768x768.png.webp" />
+                        <div class="card-body align-content-center d-inline-block justify-content-center">
+                            <span class="d-flex justify-content-center" style="font-weight:200">Sản phẩm vệ sinh</span>
+                            <p class="d-flex justify-content-center text-ellipsis" style="color: #393d39;font-size:1.2rem">Chai xịt huấn luyện vệ sinh cho chó</p>
+                            <p class="d-flex justify-content-center" style="color: #393d39;font-size:1.4rem">65.000 ₫  </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-12">
+                    <div class="card">
+                        <img src="https://petservicehcm.com/wp-content/uploads/2023/08/bat-an-inox-88-768x768.png.webp" />
+                        <div class="card-body align-content-center d-inline-block justify-content-center">
+                            <span class="d-flex justify-content-center" style="font-weight:200">Pate</span>
+                            <p class="d-flex justify-content-center text-ellipsis" style="color: #393d39;font-size:1.2rem">Pate Wanpy dạng nắp vặn tiện lợi gói 90g (giao vị ngẫu nhiên)</p>
+                            <p class="d-flex justify-content-center" style="color: #393d39;font-size:1.4rem">23.000 ₫ </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            @* phần này là cái phần dịch vụ cắt tỉa lông tại nhà*@
+
+
+            <div class="row d-none d-md-flex" style="margin:64px auto">
+                <div class="col-lg-5 col-sm-12">
+                    <img class="w-100  imgIn_Dichvucatlong" src="https://azpet.com.vn/wp-content/uploads/2020/02/cham-soc-phoc-soc-3.jpg" />
+                </div>
+                <div class="col-lg-7 col-sm-12">
+                    <p> Thông Tin & Bảng Giá</p>
+                    <h2 class="elementskit-section-title ">
+                        Dịch vụ cắt tỉa lông <br /><span><span><i class="span_TextBlue">Tại Nhà</i></span></span>
+                    </h2>
+                    <div >
+                        <div class="row">
+                            <div class="col-6">
+                                <p class="theP_In_DichVuCatLong"><i class="fa-solid fa-check me-2"></i>Cắt Gọn Lông </p>
+                                <p class="theP_In_DichVuCatLong"><i class="fa-solid fa-check me-2"></i>Tỉa Lông Tạo Kiểu</p>
+                                <p class="theP_In_DichVuCatLong"><i class="fa-solid fa-check me-2"></i>Cạo Lông</p>
+                            </div>
+                            <div class="col-6">
+                                <h6 style="font-weight:800;font-size:1.8rem;">Chỉ từ </h6>
+                                <h2 class="elementskit-section-title "><span><span><i class="span_TextBlue">400.000đ</i></span></span></h2>
+                            </div>
+                        </div>
+                        <div>
+                            <button class="btn-xemthem me-4" style="font-size:.9rem">
+                                Xem Thêm <i class="fa-solid fa-chevron-down"></i>
+                            </button>
+                            <button class="btn btn-outline-primary" style="border-radius:999px;font-size:1rem;font-weight:500">
+                                Đặt lịch ngay
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+
+            @* đây là cái phần Bảng Giá   PET SERVICE COMBO
+            *@
+        <div  style="margin:64px 0">
+
+            <div class="row">
+
+                <div class="col-md-3 col-sm-12">
+                    <p>Bảng Giá</p>
+                    <h2 class="elementskit-section-title" style="font-size:3rem">PET SERVICE <span><span><i class="span_TextBlue">COMBO</i></span></span>
+                    </h2>
+                    <button class="btn-xemthem">Xem cửa hàng <i class="fa-solid fa-chevron-right"></i></button>
+                </div>
+
+                <div class="col-sm-12 col-md-3 mb-4">
+                    <div class="card card-petservice-combo" style="border:1px solid #333;background-color:#fff;">
+                        <div >
+                            <i style="font-size:2.5rem;margin:16px auto;" aria-hidden="true" class="d-flex justify-content-center elementkit-pricing-icon elementor-animation- far fa-grin-stars"></i>
+                            <p class="d-flex justify-content-center" style="color: #49B3F4; font-size:1.6rem;font-weight:700 ">COMBO #1</p>
+                            <div class=" divCombo_in_Combo mb-4">
+                                <span class="me-2">Chỉ từ</span><h3>200.000 </h3><span>VNĐ</span>
+                            </div>
+                            <p class="d-flex justify-content-center">
+                                <i class="fa-solid fa-circle-minus icon_Check_Minus"></i> CẠO LÔNG
+                            </p>
+                            <p class="d-flex justify-content-center">
+                                <i style="color:green" class="fa-solid fa-circle-check icon_Check_Minus"></i>   TẮM SẤY
+                            </p>
+                            <p class="d-flex justify-content-center">
+                                <i style="color:green" class="fa-solid fa-circle-check icon_Check_Minus"></i>   VỆ SINH / XỊT THƠM
+                            </p>
+                            <p class="d-flex justify-content-center">
+                                <i class="fa-solid fa-circle-minus icon_Check_Minus"></i> CẮT TỈA / TẠO KIỂU
+                            </p>
+                            <button class="btn btn-outline-primary w-100 " style="border-radius:999px;margin-block-end:16px">Đặt lịch ngay</button>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-3 mb-4">
+                    <div class="card card-petservice-combo" style="border:1px solid #333;background-color:#fff;">
+                        <div >
+                            <i style="font-size:2.5rem;margin:16px auto;" aria-hidden="true" class="d-flex justify-content-center elementkit-pricing-icon elementor-animation- far fa-laugh-wink align-items-center"></i>
+                            <p class="d-flex justify-content-center" style="color: #49B3F4; font-size:1.6rem;font-weight:700 ">COMBO #2</p>
+                            <div class=" divCombo_in_Combo mb-4">
+                                <span class="me-2">Chỉ từ</span><h3>300.000 </h3><span>VNĐ</span>
+                            </div>
+                            <p class="d-flex justify-content-center">
+                                <i style="color:green" class="fa-solid fa-circle-check icon_Check_Minus"></i>  CẠO LÔNG
+                            </p>
+                            <p class="d-flex justify-content-center">
+                                <i style="color:green" class="fa-solid fa-circle-check icon_Check_Minus"></i>   TẮM SẤY
+                            </p>
+                            <p class="d-flex justify-content-center">
+                                <i class="fa-solid fa-circle-minus icon_Check_Minus"></i>  VỆ SINH / XỊT THƠM
+                            </p>
+                            <p class="d-flex justify-content-center">
+                                <i class="fa-solid fa-circle-minus icon_Check_Minus"></i> CẮT TỈA / TẠO KIỂU
+                            </p>
+                            <button class="btn btn-outline-primary w-100 " style="border-radius:999px;margin-block-end:16px">Đặt lịch ngay</button>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-3 mb-4">
+                    <div class="card card-petservice-combo" style="border:1px solid #333;background-color:#fff;">
+                        <div >
+                            <i style="font-size:2.5rem;margin:16px auto;" aria-hidden="true" class="d-flex justify-content-center elementkit-pricing-icon elementor-animation- far fa-kiss-wink-heart"></i>
+                            <p class="d-flex justify-content-center" style="color: #49B3F4; font-size:1.6rem;font-weight:700 ">COMBO #3</p>
+                            <div class=" divCombo_in_Combo mb-4 ">
+                                <span class="me-2">Chỉ từ</span><h3>400.000 </h3><span>VNĐ</span>
+                            </div>
+                            <p class="d-flex justify-content-center">
+                                <i class="fa-solid fa-circle-minus icon_Check_Minus"></i> CẠO LÔNG
+                            </p>
+                            <p class="d-flex justify-content-center">
+                                <i style="color:green" class="fa-solid fa-circle-check icon_Check_Minus"></i>   TẮM SẤY
+                            </p>
+                            <p class="d-flex justify-content-center">
+                                <i style="color:green" class="fa-solid fa-circle-check icon_Check_Minus"></i>   VỆ SINH / XỊT THƠM
+                            </p>
+                            <p class="d-flex justify-content-center">
+                                <i style="color:green" class="fa-solid fa-circle-check icon_Check_Minus"></i>  CẮT TỈA / TẠO KIỂU
+                            </p>
+                            <button class="btn btn-outline-primary w-100 " style="border-radius:999px;margin-block-end:16px">Đặt lịch ngay</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+      
+    </div>
+</main>

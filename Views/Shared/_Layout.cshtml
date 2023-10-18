@@ -1,0 +1,232 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        li {
+            list-style: none;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+    @* thẻ div dưới đây là Thanh màu xanh nước biển trên cùng *@
+    <div class="bg-primary " style="color:white;padding:12px">
+        <div class="container d-flex justify-content-between ">
+            <div class="d-none d-md-flex">
+                <div class="me-4"><i class="fa-solid fa-phone"> </i>0344197197</div>
+                <div>
+                    <i class="fa-solid fa-shop"> </i>140 Lê Trọng Tấn
+                </div>
+            </div>
+            <div class="d-flex ">
+                @* trong phần này thì khi add sản phẩm vào thì tăng cái 0đ lên *@
+                <i class="me-4">0₫</i>
+                <i class="fa-solid fa-cart-shopping me-4" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"></i>
+
+                <div class="offcanvas offcanvas-end" style="color:#333" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasRightLabel">Cart</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        No item in cart
+                    </div>
+                </div>
+                <i class="fa-solid fa-magnifying-glass me-4"></i>
+            </div>
+        </div>
+    </div>
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark ">
+        <div class="container">
+            <img style="width:300px" src="https://petservicehcm.com/wp-content/uploads/2019/11/Pet_logo.png.webp"
+                 onclick="window.location.href ='@Url.Action("Index", "Home", new { area = "" })'" />
+            <div class=" navbar-collapse justify-content-between">
+                <ul class="navbar-nav flex-grow-1 d-none d-lg-flex justify-content-around ms-4 " style="font-size:20px">
+                    <li>@Html.ActionLink("Giới Thiệu", "Index", "Home", new { area = "" }, new { @class = "nav-link text-dark" })</li>
+                    <li>@Html.ActionLink("Dịch Vụ", "Index", "DichVu", new { area = "" }, new { @class = "nav-link text-dark" })</li>
+                    <li>@Html.ActionLink("Cửa Hàng", "Index", "Shop", new { area = "" }, new { @class = "nav-link text-dark" })</li>
+                    <li>@Html.ActionLink("Blog", "Index", "Home", new { area = "" }, new { @class = "nav-link text-dark" })</li>
+                    <li>@Html.ActionLink("Liên Hệ", "Contact", "Home", new { area = "" }, new { @class = "nav-link text-dark" })</li>
+                    <li><button class="nav-link btn text-light " style="background-color:#333;padding:8px 32px;border-radius:999px" onclick="window.location.href ='@Url.Action("Index", "OnlineBooking", new { area = "" })'">Online Booking <i class="fa-solid fa-caret-right"></i></button></li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+    <div>
+
+        @RenderBody()
+    </div>
+    <footer>
+        <div class="bg-primary" style="color:white">
+            <div class="d-flex justify-content-center container" style="padding:32px 64px">
+                <h3>Hotline hỗ trợ 24/7 của chúng tôi luôn sẵn sàng giải đáp mọi thắc mắc của bạn | 0898520760</h3>
+            </div>
+        </div>
+        <div class="bg-dark">
+
+            <div class="container text-light ">
+                <div class="row" style="padding:64px 0">
+                    <div class="col-lg-6 col-sm-12">
+                        <h3 style="font-weight:800;margin-bottom:32px">Hiển_Lazada#1</h3>
+                        <p style="margin-bottom: 32px">
+                            Pet Service ra đời với mong muốn mang lại cho khách hàng sự chuyên nghiệp, uy tín mang nét đẹp hoa mỹ mà chúng tôi đem lại sự trải nghiệm tốt nhất cho thú cưng của chúng ta. Với nhiều năm kinh nghiệm trong ngành dịch vụ thú cưng bao gồm: Spa thú cưng, Khách sạn thú cưng, Dịch vụ thú cưng tại nhà,…
+                        </p>
+                        <div>
+                            <a style="color:white;text-decoration:none" href="#">
+                                <i class="fa-solid fa-shop" /></i>140 Lê Trọng Tấn, P. Tây Thạnh, Q. Tân Phú, TP. Hồ Chí Minh
+                            </a>
+                        </div>
+                        <div>
+                            <a style="color:white;text-decoration:none" href="#">
+                                <i class="fa-solid fa-phone"></i>Liên Hệ : 0344197279
+                            </a>
+                        </div>
+                        <div>
+                            <a style="color:white;text-decoration:none" href="#">
+                                <i class="fa-solid fa-envelope"></i>Email : vinhhien12z@gmail.com
+                            </a>
+                        </div>
+                        <img style="width:250px ;margin-top:24px" src="https://mdcop.vn/wp-content/uploads/2019/04/da-thong-bao-bo-cong-thuong-705x267.png" />
+                    </div>
+                    <div class="col-lg-3 col-sm-12">
+                        <div style="margin-bottom:32px">
+                            <h4>Dịch Vụ</h4>
+                            <ul style="padding:0;">
+                                <li>
+                                    <a class="text-light" href="#">
+                                        Spa Thú Cưng Chuẩn 5 Sao
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="text-light" href="#">
+                                        Dịch Vụ Tắm Thú Cưng Tại Nhà
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="text-light" href="#">
+                                        Dịch Vụ Cắt Tỉa Lông Và Tạo Kiểu Tại Nhà
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="text-light" href="#">
+                                        Khách Sạn Thú Cưng Chuẩn 5 Sao
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="text-light" href="#">
+                                        Cung Cấp Sản Phẩm, Phụ Kiện
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <h4>Truy Cập</h4>
+                            <ul style="padding:0">
+                                <li>
+                                    <a class="text-light" href="#">Trang Chủ</a>
+                                </li>
+                                <li>
+                                    <a class="text-light" href="#"> Giới Thiệu Về Pet Service</a>
+                                </li>
+                                <li>
+                                    <a class="text-light" href="#"> Chia Sẻ Kiến Thức Và Kinh Nghiệm</a>
+                                </li>
+                                <li>
+                                    <a class="text-light" href="#"> HOTLINE 24/7</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-sm-12">
+                        <h5 style="margin-bottom:24px">
+                            DỊCH VỤ THÚ CƯNG TPHCM
+                        </h5>
+                        <ul style="padding:0">
+                            <li>
+                                <a href="#" class="text-light">
+                                    Dịch Vụ Thú Cưng Tại Nhà Quận 1
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-light">
+                                    Dịch Vụ Thú Cưng Tại Nhà Quận 2
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-light">
+                                    Dịch Vụ Thú Cưng Tại Nhà Quận 4
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-light">
+                                    Dịch Vụ Thú Cưng Tại Nhà Quận 7
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-light">
+                                    Dịch Vụ Thú Cưng Tại Nhà Quận Thủ Đức
+                                </a>
+                            <li>
+                                <a href="#" class="text-light">
+                                    Dịch Vụ Thú Cưng Tại Nhà Quận Gò Vấp
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-light">
+                                    Dịch Vụ Thú Cưng Tại Nhà Quận Tân Phú
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-light">
+                                    Dịch Vụ Thú Cưng Tại Nhà Quận Bình Tân
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-light">
+
+                                    Dịch Vụ Thú Cưng Tại Nhà Quận Bình Thạnh
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" class="text-light">
+                                    Dịch Vụ Thú Cưng Tại Nhà Quận Tân Bình
+                                </a>
+                            </li>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+</body>
+</html>

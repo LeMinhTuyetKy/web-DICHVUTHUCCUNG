@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Nhom5_DVTHUCUNGModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Category">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="100" />
+    <Property Name="Description" Type="nvarchar" MaxLength="500" />
+    <Property Name="Position" Type="nvarchar" MaxLength="100" />
+    <Property Name="SeoTitle" Type="nvarchar" MaxLength="100" />
+    <Property Name="SeoDescription" Type="nvarchar" MaxLength="500" />
+    <Property Name="SeoKewords" Type="nvarchar" MaxLength="100" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="CreateBy" Type="nvarchar" MaxLength="100" />
+    <Property Name="ModifiedrDate" Type="datetime" />
+    <Property Name="ModifiedrBy" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+    <Property Name="principal_id" Type="int" Nullable="false" />
+    <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="version" Type="int" />
+    <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="TB_Adv">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="100" />
+    <Property Name="Description" Type="nvarchar" MaxLength="500" />
+    <Property Name="Image" Type="nvarchar" MaxLength="100" />
+    <Property Name="Type" Type="nvarchar" MaxLength="500" />
+    <Property Name="Link" Type="nvarchar" MaxLength="100" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="CreateBy" Type="nvarchar" MaxLength="100" />
+    <Property Name="ModifiedrDate" Type="datetime" />
+    <Property Name="ModifiedrBy" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="TB_Billingnformation">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MaId" Type="nvarchar" MaxLength="50" />
+    <Property Name="CustomerName" Type="nvarchar" MaxLength="100" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="15" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="Address" Type="nvarchar" MaxLength="100" />
+    <Property Name="CreateBy" Type="nvarchar" MaxLength="100" />
+    <Property Name="ModifiedrDate" Type="datetime" />
+    <Property Name="ModifiedrBy" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="TB_BillingService">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="MaId" Type="nvarchar" MaxLength="50" />
+    <Property Name="service" Type="nvarchar" MaxLength="100" />
+    <Property Name="CustomerName" Type="nvarchar" MaxLength="100" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="15" />
+    <Property Name="Address" Type="nvarchar" MaxLength="100" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="Time" Type="datetime" />
+    <Property Name="NamePet" Type="nvarchar" MaxLength="10" />
+    <Property Name="species" Type="nvarchar" MaxLength="15" />
+    <Property Name="alike" Type="nvarchar" MaxLength="15" />
+    <Property Name="OldPet" Type="int" />
+    <Property Name="weightcapacity" Type="int" />
+    <Property Name="Message" Type="nvarchar" MaxLength="15" />
+    <Property Name="CreateBy" Type="nvarchar" MaxLength="100" />
+    <Property Name="ModifiedrDate" Type="datetime" />
+    <Property Name="ModifiedrBy" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="TB_LienHe">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="100" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="500" />
+    <Property Name="Email" Type="nvarchar" MaxLength="100" />
+    <Property Name="Message" Type="nvarchar" MaxLength="500" />
+    <Property Name="IsRead" Type="nvarchar" MaxLength="100" />
+    <Property Name="Icon" Type="nvarchar" MaxLength="100" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="CreateBy" Type="nvarchar" MaxLength="100" />
+    <Property Name="ModifiedrDate" Type="datetime" />
+    <Property Name="ModifiedrBy" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="TB_Order">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Image" Type="nvarchar" MaxLength="500" />
+    <Property Name="Title" Type="nvarchar" MaxLength="100" />
+    <Property Name="TotaAmount" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="Quantity" Type="int" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="CreateBy" Type="nvarchar" MaxLength="100" />
+    <Property Name="ModifiedrDate" Type="datetime" />
+    <Property Name="ModifiedrBy" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'Nhom5_DVTHUCUNG.dbo.TB_OrderDetail' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="TB_OrderDetail">
+          <Property Name="TotaAmount" Type="decimal" Precision="18" Scale="2" />
+          <Property Name="Quantity" Type="int" />
+          <Property Name="CreateDate" Type="datetime" />
+          <Property Name="CreateBy" Type="nvarchar" MaxLength="100" />
+          <Property Name="ModifiedrDate" Type="datetime" />
+          <Property Name="ModifiedrBy" Type="nvarchar" MaxLength="100" />
+        </EntityType>-->
+  <EntityType Name="TB_Product">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="100" />
+    <Property Name="ProductCategoryId" Type="int" />
+    <Property Name="Description" Type="nvarchar" MaxLength="4000" />
+    <Property Name="Detail" Type="nvarchar" MaxLength="500" />
+    <Property Name="Image" Type="nvarchar" MaxLength="500" />
+    <Property Name="Price" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="inventery" Type="int" />
+    <Property Name="Quantity" Type="int" />
+    <Property Name="Icon" Type="nvarchar" MaxLength="100" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="CreateBy" Type="nvarchar" MaxLength="100" />
+    <Property Name="ModifiedrDate" Type="datetime" />
+    <Property Name="ModifiedrBy" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="TB_ProductCategory">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="100" />
+    <Property Name="Description" Type="nvarchar" MaxLength="500" />
+    <Property Name="ParentId" Type="nvarchar" MaxLength="100" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="CreateBy" Type="nvarchar" MaxLength="100" />
+    <Property Name="ModifiedrDate" Type="datetime" />
+    <Property Name="ModifiedrBy" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="TB_Service">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="100" />
+    <Property Name="ProductCategoryId" Type="int" />
+    <Property Name="Detail" Type="nvarchar" MaxLength="500" />
+    <Property Name="Image" Type="nvarchar" MaxLength="500" />
+    <Property Name="Price" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="CreateBy" Type="nvarchar" MaxLength="100" />
+    <Property Name="ModifiedrDate" Type="datetime" />
+    <Property Name="ModifiedrBy" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="TB_ServiceCategory">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="100" />
+    <Property Name="Description" Type="nvarchar" MaxLength="500" />
+    <Property Name="ParentId" Type="nvarchar" MaxLength="100" />
+    <Property Name="CreateDate" Type="datetime" />
+    <Property Name="CreateBy" Type="nvarchar" MaxLength="100" />
+    <Property Name="ModifiedrDate" Type="datetime" />
+    <Property Name="ModifiedrBy" Type="nvarchar" MaxLength="100" />
+  </EntityType>
+  <EntityContainer Name="Nhom5_DVTHUCUNGModelStoreContainer">
+    <EntitySet Name="Category" EntityType="Self.Category" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_Adv" EntityType="Self.TB_Adv" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_Billingnformation" EntityType="Self.TB_Billingnformation" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_BillingService" EntityType="Self.TB_BillingService" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_LienHe" EntityType="Self.TB_LienHe" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_Order" EntityType="Self.TB_Order" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_Product" EntityType="Self.TB_Product" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_ProductCategory" EntityType="Self.TB_ProductCategory" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_Service" EntityType="Self.TB_Service" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="TB_ServiceCategory" EntityType="Self.TB_ServiceCategory" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

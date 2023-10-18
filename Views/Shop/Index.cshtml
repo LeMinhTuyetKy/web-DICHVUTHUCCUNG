@@ -1,0 +1,103 @@
+﻿
+@model List<clonePetService.Models.Product>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    //List<clonePetService.Models.Product> listProducts = Session["products"] as List<clonePetService.Models.Product>;
+
+}
+
+
+
+
+
+<style>
+    .elementskit-section-title {
+        color: #110729;
+        margin: 0px 0px 30px 0px;
+        font-family: "Montserrat", Sans-serif;
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 52px;
+    }
+
+        .elementskit-section-title span {
+            color: #49b3f4;
+            font-family: "Montserrat", Sans-serif;
+            font-size: 48px;
+            font-weight: 700;
+            text-shadow: 3px 1px 0px #000000;
+        }
+
+    .span_TextBlue:hover {
+        color: #110729;
+    }
+</style>
+
+
+
+
+
+
+<main>
+
+
+
+
+    <div class="container">
+        <div class="row">
+            <div class="d-none d-lg-block col-lg-4 ">
+                <h2 class="elementskit-section-title ">
+                    Hiển_lazada#1 Shop <br /><span><span><i class="span_TextBlue">Sản phẩm</i></span></span>
+                </h2>
+            </div>
+            <div class="col-lg-8 col-12">
+                <img src="https://petservicehcm.com/wp-content/uploads/2021/04/pet-cover-1440x548.jpeg.webp" style="width:100%" />
+            </div>
+        </div>
+        <div class="row mt-5">
+
+            <div class="col-3 d-none d-lg-block">
+                <form action="/Shop/Index" method="post">
+                    <div class="row">
+                        <div class="col">
+                            <input type="number" name="first_price" class="form-control" placeholder="Giá từ" aria-label="first price">
+                        </div>
+                        <div class="col">
+                            <input type="number" name="last_price" class="form-control" placeholder="Đến" aria-label="Last price">
+                        </div>
+                    </div>
+                    <input type="submit" class="btn btn-primary" value="Lọc" />
+                </form>
+
+         
+
+            </div>
+            <div class="col-9 ">
+                <div class="row">
+                    @{
+                        foreach (var i in Model)
+                        {
+                            <div class="col-sm-12 col-md-6 col-lg-4 mb-4">
+                                <div class="card">
+                                    <img src="@i.Image" style="width:100%" />
+                                    <div>
+                                        <span style="font-weight:300;font-size:1rem;display:flex;justify-content:center">@i.Type</span>
+                                        <h5 class="d-flex justify-content-center">@i.Title</h5>
+                                        <p class="d-flex justify-content-center">@i.Price</p>
+                                    </div>
+                                </div>
+                            </div>
+                        }
+                    }
+
+                   
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</main>
