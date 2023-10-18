@@ -14,11 +14,11 @@ namespace clonePetService.Models
     
     public partial class Service
     {
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Service()
-        {
-            this.Advs = new HashSet<Adv>();
-        }
+        //[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
+        //public Service()
+        //{
+        //    this.Advs = new HashSet<Adv>();
+        //}
     
         public int Id { get; set; }
         public string Title { get; set; }
@@ -27,9 +27,9 @@ namespace clonePetService.Models
         public string Image { get; set; }
         public Nullable<int> Price { get; set; }
         public Nullable<System.DateTime> CreateDate { get; set; }
-        public string CreateBy { get; set; }
+        //public string CreateBy { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        //[System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Adv> Advs { get; set; }
         public virtual ServiceCategory ServiceCategory { get; set; }
     }
